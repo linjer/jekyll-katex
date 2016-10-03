@@ -11,7 +11,7 @@
 ### JetBrains template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
-.idea/
+.idea
 
 ## File-based project format:
 *.iws
@@ -35,7 +35,7 @@ npm-debug.log*
 
 
 # Dependency directories
-# node_modules # Include KaTeX for gem independence
+**/node_modules/
 jspm_packages
 
 # Optional npm cache directory
