@@ -8,7 +8,6 @@ Gem::Specification.new do |spec|
   spec.name          = 'jekyll-katex'
   spec.version       = Jekyll::Katex::VERSION
   spec.authors       = ['Jerry Lin']
-  spec.email         = ['linjer@gmail.com']
 
   spec.summary       = %q{Jekyll plugin for easy KaTeX math server-side rendering.}
   spec.description   = %q{Adds a liquid tag you can use to do server-side rendering of latex math using KaTeX}
@@ -24,13 +23,12 @@ Gem::Specification.new do |spec|
   end
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) } <<
-                           'lib/node_modules/**/*'
   spec.bindir        = 'bin'
   spec.executables   = []
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'jekyll', '~> 3.0'
-  spec.add_runtime_dependency 'execjs', '~> 2.7.0'
+  spec.add_runtime_dependency 'execjs', '~> 2.7'
 
   spec.add_development_dependency 'bundler', '~> 1.12'
   spec.add_development_dependency 'rake', '~> 10.0'

@@ -6,6 +6,8 @@ KaTeX is a library for rending math on the web using LaTeX, similar to MathJax.
 KaTeX differs from MathJax in that it displays faster rendering speed and renders to pure HTML rather than PNGs.
 There are various resources in benchmarking and comparing their performance, for more info, [start here](https://khan.github.io/KaTeX/).
 
+Depends on KaTeX `^0.6.0`.
+
 ## Installation
 
 ### Bundler (recommended)

@@ -4,7 +4,7 @@ module Jekyll
   module Tags
     class Katex < Liquid::Block
 
-      KATEX_JS_PATH = File.join(Jekyll::Katex::LIB_ROOT, 'node_modules/katex/dist/katex.min.js')
+      KATEX_JS_PATH = File.join(Jekyll::Katex::LIB_ROOT, 'assets/js/katex.min.js')
 
       def initialize(tag_name, markup, tokens)
         super
