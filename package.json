@@ -1,11 +1,9 @@
 {
   "name": "jekyll-katex",
   "version": "0.1.0",
-  "description": "",
+  "description": "Server-side LaTeX math rendering via KaTeX",
   "private": true,
-  "directories": {
-    "test": "test"
-  },
+  "directories": {},
   "scripts": {},
   "author": "Jerry Lin",
   "license": "MIT",

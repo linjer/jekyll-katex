@@ -8,10 +8,11 @@ Gem::Specification.new do |spec|
   spec.name          = 'jekyll-katex'
   spec.version       = Jekyll::Katex::VERSION
   spec.authors       = ['Jerry Lin']
+  spec.email         = 'linjer@gmail.com'
 
   spec.summary       = %q{Jekyll plugin for easy KaTeX math server-side rendering.}
   spec.description   = %q{Adds a liquid tag you can use to do server-side rendering of latex math using KaTeX}
-  spec.homepage      = 'http://www.github.com'
+  spec.homepage      = 'https://github.com/linjer/jekyll-katex'
   spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

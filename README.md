@@ -59,17 +59,14 @@ c = \pm\sqrt{a^2 + b^2}
 
 ### Getting Started
 
-```
-bundle install
-cd lib
-npm i
+```bash
+./bin/setup
 ```
 
 ### TODOs
 
 1. Build and push to rubygems.org
-2. Better stand-alone packaging of KaTeX - currently packages entire node_modules
-3. Provide easy way to leverage packaged KaTeX fonts and CSS
+2. Better stand-alone packaging of KaTeX
 
 ## Contributing
 
