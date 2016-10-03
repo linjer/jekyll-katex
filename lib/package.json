@@ -1,0 +1,15 @@
+{
+  "name": "jekyll-katex",
+  "version": "0.1.0",
+  "description": "",
+  "private": true,
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {},
+  "author": "Jerry Lin",
+  "license": "MIT",
+  "dependencies": {
+    "katex": "^0.6.0"
+  }
+}
