@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
   end
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) } <<
-                           'lib/node_modules'
+                           'lib/node_modules/**/*'
   spec.bindir        = 'bin'
   spec.executables   = []
   spec.require_paths = ['lib']
