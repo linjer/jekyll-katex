@@ -7,6 +7,10 @@ task :katex_npm_i do
   cp 'node_modules/katex/dist/katex.min.js', 'lib/assets/js/katex.min.js'
 end
 
-task :build => [:katex_npm_i] do
+task build: [:katex_npm_i] do
   sh 'gem', 'build', 'jekyll-katex.gemspec'
+end
+
+task push: [:build] do
+  sh 'gem', 'push', "jekyll-katex-#{Jekyll::Katex::VERSION}.gem"
 end
