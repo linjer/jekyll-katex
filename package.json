@@ -8,6 +8,6 @@
   "author": "Jerry Lin",
   "license": "MIT",
   "dependencies": {
-    "katex": "^0.6.0"
+    "katex": "^0.7.1"
   }
 }
