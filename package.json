@@ -1,6 +1,6 @@
 {
   "name": "jekyll-katex",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Server-side LaTeX math rendering via KaTeX",
   "private": true,
   "directories": {},
@@ -9,5 +9,6 @@
   "license": "MIT",
   "dependencies": {
     "katex": "^0.8.3"
-  }
+  },
+  "repository": "git@github.com:linjer/jekyll-katex.git"
 }

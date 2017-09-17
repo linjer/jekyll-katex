@@ -2,12 +2,12 @@ require "bundler/gem_tasks"
 
 task default: :build
 
-task :katex_npm_i do
-  sh 'npm', 'i'
+task :js_i do
+  sh 'yarn', 'install'
   cp 'node_modules/katex/dist/katex.min.js', 'lib/assets/js/katex.min.js'
 end
 
-task build: [:katex_npm_i] do
+task build: [:js_i] do
   sh 'gem', 'build', 'jekyll-katex.gemspec'
 end
 
