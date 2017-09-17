@@ -6,13 +6,13 @@ KaTeX is a library for rending math on the web using LaTeX, similar to MathJax.
 KaTeX differs from MathJax in that it displays faster rendering speed and renders to pure HTML rather than PNGs.
 There are various resources in benchmarking and comparing their performance, for more info, [start here](https://khan.github.io/KaTeX/).
 
-Comes packaged with KaTeX `^0.6.0`.
+Comes packaged with KaTeX `^0.8.3` but 
 
 ## Installation
 
 ### Bundler (recommended)
 
-In your Jekyll project, add `jekyll-katex` to your Gemfile plugin block:
+In your Jekyll project, add `jekyll-katex` to your `gems.rb`/`Gemfile` plugin block:
 
 ```ruby
 group :jekyll_plugins do
@@ -27,14 +27,14 @@ For alternative install methods, see [here](https://jekyllrb.com/docs/plugins/).
 ### Config
 
 Once plugin is included in your project, follow the installation instructions on the [KaTeX](https://github.com/Khan/KaTeX) README for the CSS and font files.
-You can skip including the `.js` file unless you want to do in-browser rendering as well.
+You can skip including the `.js` file unless you want to do client-side in-browser rendering as well.
 
 #### tl;dr
 
 Put the following in your page headers:
 
 ```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
 ```
 
 ## Usage
@@ -60,13 +60,12 @@ c = \pm\sqrt{a^2 + b^2}
 ### Getting Started
 
 ```bash
-./bin/setup
+./bin/setup.sh
 ```
 
 ### TODOs
 
-1. Build and push to rubygems.org
-2. Better stand-alone packaging of KaTeX
+1. Better stand-alone packaging of KaTeX - specific KaTeX version shouldn't need to depend on this plugin
 
 ## Contributing
 

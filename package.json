@@ -1,6 +1,6 @@
 {
   "name": "jekyll-katex",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Server-side LaTeX math rendering via KaTeX",
   "private": true,
   "directories": {},
@@ -8,6 +8,6 @@
   "author": "Jerry Lin",
   "license": "MIT",
   "dependencies": {
-    "katex": "^0.7.1"
+    "katex": "^0.8.3"
   }
 }

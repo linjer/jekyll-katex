@@ -28,7 +28,7 @@ Gem::Specification.new do |spec|
   spec.executables   = []
   spec.require_paths = ['lib']
 
-  spec.required_ruby_version = '>= 2.3.0'
+  spec.required_ruby_version = '>= 2.3.5'
 
   spec.add_runtime_dependency 'jekyll', '~> 3.5'
   spec.add_runtime_dependency 'execjs', '~> 2.7'
@@ -36,4 +36,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler', '~> 1.15'
   spec.add_development_dependency 'rake', '~> 10.5'
   spec.add_development_dependency 'rspec', '~> 3.5'
+  spec.add_development_dependency 'rubocop', '~> 0.50.0'
 end
