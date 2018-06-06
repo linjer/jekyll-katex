@@ -22,7 +22,7 @@ module Jekyll
 
       def render(context)
         latex_source = super
-        rendering_options = Jekyll::Katex::Configuration.global_rendering_options.merge({ displayMode: @display })
+        rendering_options = Jekyll::Katex::Configuration.global_rendering_options.merge(displayMode: @display)
         KATEX.call('katex.renderToString', latex_source, rendering_options)
       end
     end

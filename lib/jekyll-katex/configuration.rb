@@ -23,9 +23,7 @@ module Jekyll
         js_path = JEKYLL_CONFIG['js_path'] || CONFIG_DEFAULTS[:js_path]
 
         katex_js = Dir.glob("#{js_path}/**/#{js_filename}").first
-        if katex_js.nil?
-          raise RuntimeError, 'Could not find KaTeX javascript file using provided configuration.'
-        end
+        raise 'Could not find KaTeX javascript file using provided configuration.' if katex_js.nil?
         Jekyll.logger.info LOG_TOPIC, "Found KaTeX js at: #{katex_js}"
         katex_js
       end
