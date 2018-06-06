@@ -1,4 +1,6 @@
-require "bundler/gem_tasks"
+# frozen_string_literal: true
+
+require 'bundler/gem_tasks'
 
 task default: :build
 
@@ -7,10 +9,16 @@ task :js_i do
   cp 'node_modules/katex/dist/katex.min.js', 'lib/assets/js/katex.min.js'
 end
 
-task build: [:js_i] do
+task build: %i[js_i] do
   sh 'gem', 'build', 'jekyll-katex.gemspec'
 end
 
-task push: [:build] do
-  sh 'gem', 'push', "jekyll-katex-#{Jekyll::Katex::VERSION}.gem"
+task clobber: [:clean] do
+  rm_rf Rake::FileList.new('*.gem')
 end
+
+task :stylecheck do
+  sh 'bundle', 'exec', 'rubocop', '--auto-correct'
+end
+
+task release: :stylecheck

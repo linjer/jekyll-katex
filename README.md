@@ -6,35 +6,49 @@ KaTeX is a library for rending math on the web using LaTeX, similar to MathJax.
 KaTeX differs from MathJax in that it displays faster rendering speed and renders to pure HTML rather than PNGs.
 There are various resources in benchmarking and comparing their performance, for more info, [start here](https://khan.github.io/KaTeX/).
 
-Comes packaged with KaTeX `^0.8.3` but 
+Comes packaged with KaTeX `0.9.0` but you can specify a different version in your Jekyll `_config.yml` (see below).
 
 ## Installation
 
 ### Bundler (recommended)
 
-In your Jekyll project, add `jekyll-katex` to your `gems.rb`/`Gemfile` plugin block:
+1. In your Jekyll project, add the plugin to your `_config.yml`, e.g.:
 
-```ruby
-group :jekyll_plugins do
-  gem 'jekyll-katex'
-end
-```
+    ```yaml
+    plugins:
+      - jekyll-katex
+    ```
 
-Once done, execute `bundle install`.
+2. Add `jekyll-katex` to your `gems.rb`/`Gemfile` plugin block:
 
-For alternative install methods, see [here](https://jekyllrb.com/docs/plugins/).
+    ```ruby
+    group :jekyll_plugins do
+      gem 'jekyll-katex'
+    end
+    ```
 
-### Config
+    Once done, execute `bundle install`. For more information, see [here](https://jekyllrb.com/docs/plugins/).
 
-Once plugin is included in your project, follow the installation instructions on the [KaTeX](https://github.com/Khan/KaTeX) README for the CSS and font files.
-You can skip including the `.js` file unless you want to do client-side in-browser rendering as well.
+3. Add KaTeX CSS and Fonts. Follow the installation instructions on the [KaTeX README](https://github.com/Khan/KaTeX).
+    You can skip including the `.js` file unless you want to do client-side in-browser rendering, as well.
 
-#### tl;dr
+    Put the following (adjusting for your version) in your page headers:
 
-Put the following in your page headers:
+    ```html
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.css" integrity="sha384-BTL0nVi8DnMrNdMQZG1Ww6yasK9ZGnUxL1ZWukXQ7fygA1py52yPp9W4wrR00VML" crossorigin="anonymous">
+    ```
 
-```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+## Configuration
+
+Supported configuration values, shown with default values:
+
+```yml
+katex:
+  js_path: "{{ Gem::lib_path }}/assets/js"  # Path used to search for katex.min.js
+  rendering_options:
+    # Default KaTeX rendering options. See https://github.com/Khan/KaTeX#rendering-options
+    throw_error: true                       # throwOnError - set to false if you want rendering to output error as text rather than a build error
+    error_color: "#cc0000"                  # errorColor
 ```
 
 ## Usage
@@ -57,15 +71,10 @@ c = \pm\sqrt{a^2 + b^2}
 
 ## Development
 
-### Getting Started
-
 ```bash
-./bin/setup.sh
+$ bundle install
+$ rake build
 ```
-
-### TODOs
-
-1. Better stand-alone packaging of KaTeX - specific KaTeX version shouldn't need to depend on this plugin
 
 ## Contributing
 

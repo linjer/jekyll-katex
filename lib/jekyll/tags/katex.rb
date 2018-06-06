@@ -1,25 +1,30 @@
+# frozen_string_literal: true
+
 require 'execjs'
+require 'jekyll-katex/configuration'
 
 module Jekyll
   module Tags
+    # Defines the custom Liquid tag for compile-time rendering of KaTeX math
+    #   {% katex %}
+    #   <latex math>
+    #   {% endkatex %}
     class Katex < Liquid::Block
-
-      KATEX_JS_PATH = File.join(Jekyll::Katex::LIB_ROOT, 'assets/js/katex.min.js')
+      LOG_TOPIC = 'Katex Block:'
+      KATEX ||= ExecJS.compile(File.open(Jekyll::Katex::Configuration.js_path).read)
 
       def initialize(tag_name, markup, tokens)
         super
-        @tokens = tokens
         @markup = markup
-
+        @tokens = tokens
         @display = markup.include? 'display'
-        @katex = ExecJS.compile(open(KATEX_JS_PATH).read)
       end
 
       def render(context)
         latex_source = super
-        @katex.call("katex.renderToString", latex_source, displayMode: @display)
+        rendering_options = Jekyll::Katex::Configuration.global_rendering_options.merge({ displayMode: @display })
+        KATEX.call('katex.renderToString', latex_source, rendering_options)
       end
     end
   end
 end
-2
