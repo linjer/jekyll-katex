@@ -16,7 +16,7 @@ module Jekyll
         }
       }.freeze
 
-      JEKYLL_CONFIG = Jekyll.configuration['katex']
+      JEKYLL_CONFIG = Jekyll.configuration['katex'] || {}
 
       def self.js_path
         js_filename = JEKYLL_CONFIG['js_filename'] || CONFIG_DEFAULTS[:js_filename]
