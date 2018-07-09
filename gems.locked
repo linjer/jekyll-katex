@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jekyll-katex (0.2.0)
+    jekyll-katex (0.3.0)
       execjs (~> 2.7)
       jekyll (~> 3.8)
 
@@ -55,7 +55,7 @@ GEM
       ast (~> 2.4.0)
     pathutil (0.16.1)
       forwardable-extended (~> 2.6)
-    powerpack (0.1.1)
+    powerpack (0.1.2)
     public_suffix (3.0.2)
     rainbow (3.0.0)
     rake (12.3.1)
