@@ -53,6 +53,10 @@ katex:
 
 ## Usage
 
+There are two liquid tags: `katex` and `katexmm`.
+
+### katex
+
 Use the `katex` liquid tag for LaTeX math equations like so:
 
 ```latex
@@ -68,6 +72,22 @@ If you want the equation to be rendered in display mode (on its own line, center
 c = \pm\sqrt{a^2 + b^2}
 {% endkatex %}
 ```
+
+### katexmm
+
+The `katex` liquid tag can be cumbersome, particularly if you have many inline blocks, which would need to be opened
+and closed repeatedly, cluttering the source text. `katexmm` is an alternative that supports fenced math mode blocks
+similar to standard latex:
+
+```latex
+{% katexmm %}
+This is a mixed environment where you can have text and normal text and $c = \pm\sqrt{a^2 + b^2}$ fenced math. \$!
+{% endkatexmm %}
+```
+
+* `$` for inline
+* `$$` for display mode
+* `\$` to escape `$` anywhere within the `katexmm` environment
 
 ## Development
 

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'execjs'
 require 'jekyll-katex/configuration'
+require 'jekyll-katex/katex_js'
 
 module Jekyll
   module Tags
@@ -11,7 +11,7 @@ module Jekyll
     #   {% endkatex %}
     class Katex < Liquid::Block
       LOG_TOPIC = 'Katex Block:'
-      KATEX ||= ExecJS.compile(File.open(Jekyll::Katex::Configuration.js_path).read)
+      KATEX ||= Jekyll::Katex::KATEX_JS
 
       def initialize(tag_name, markup, tokens)
         super

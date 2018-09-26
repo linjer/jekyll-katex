@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'jekyll'
+require 'jekyll-katex/lib_root'
 
 module Jekyll
   module Katex
