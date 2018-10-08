@@ -35,7 +35,7 @@ Comes packaged with KaTeX `0.9.0` but you can specify a different version in you
     Put the following (adjusting for your version) in your page headers:
 
     ```html
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.css" integrity="sha384-BTL0nVi8DnMrNdMQZG1Ww6yasK9ZGnUxL1ZWukXQ7fygA1py52yPp9W4wrR00VML" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
     ```
 
 ## Configuration
@@ -81,7 +81,7 @@ similar to standard latex:
 
 ```latex
 {% katexmm %}
-This is a mixed environment where you can have text and normal text and $c = \pm\sqrt{a^2 + b^2}$ fenced math. \$!
+This is a mixed environment where you can have normal text and $c = \pm\sqrt{a^2 + b^2}$ fenced math. \$!
 {% endkatexmm %}
 ```
 
