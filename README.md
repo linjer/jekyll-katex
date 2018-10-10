@@ -1,6 +1,7 @@
 # jekyll-katex
 
 [![Build Status](https://travis-ci.com/linjer/jekyll-katex.svg?branch=master)](https://travis-ci.com/linjer/jekyll-katex)
+[![Latest Release](https://badge.fury.io/rb/jekyll-katex.svg)](https://badge.fury.io/rb/jekyll-katex)
 
 This is a [Jekyll](http://jekyllrb.com) plugin for performing compile-time math rendering via the [KaTeX](https://github.com/Khan/KaTeX) library.
 KaTeX is a library for rending math on the web using LaTeX, similar to MathJax.
