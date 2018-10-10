@@ -1,6 +1,8 @@
 # jekyll-katex
 
-This is a [Jekyll](http://jekyllrb.com) plugin for performing server-side math rendering via the [KaTeX](https://github.com/Khan/KaTeX) library.
+[![Build Status](https://travis-ci.com/linjer/jekyll-katex.svg?branch=master)](https://travis-ci.com/linjer/jekyll-katex)
+
+This is a [Jekyll](http://jekyllrb.com) plugin for performing compile-time math rendering via the [KaTeX](https://github.com/Khan/KaTeX) library.
 KaTeX is a library for rending math on the web using LaTeX, similar to MathJax.
 
 KaTeX differs from MathJax in that it displays faster rendering speed and renders to pure HTML rather than PNGs.
@@ -10,7 +12,6 @@ Comes packaged with KaTeX `0.9.0` but you can specify a different version in you
 
 ## Installation
 
-### Bundler (recommended)
 
 1. In your Jekyll project, add the plugin to your `_config.yml`, e.g.:
 
@@ -27,7 +28,7 @@ Comes packaged with KaTeX `0.9.0` but you can specify a different version in you
     end
     ```
 
-    Once done, execute `bundle install`. For more information, see [here](https://jekyllrb.com/docs/plugins/).
+    Once done, execute `bundle install`.
 
 3. Add KaTeX CSS and Fonts. Follow the installation instructions on the [KaTeX README](https://github.com/Khan/KaTeX).
     You can skip including the `.js` file unless you want to do client-side in-browser rendering, as well.
