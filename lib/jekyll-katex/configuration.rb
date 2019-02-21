@@ -10,7 +10,7 @@ module Jekyll
       LOG_TOPIC = 'Katex Configuration:'
       CONFIG_DEFAULTS = {
         js_filename: 'katex.min.js',
-        js_path: File.join(Jekyll::Katex::LIB_ROOT, 'assets/js/'),
+        js_path: File.join(Jekyll::Katex::LIB_ROOT, 'assets/js'),
         rendering_options: {
           throw_error: true,
           error_color: '#cc0000'
