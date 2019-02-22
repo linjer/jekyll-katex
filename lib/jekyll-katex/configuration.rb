@@ -31,8 +31,8 @@ module Jekyll
 
       def self.global_rendering_options
         {
-          throwOnError: JEKYLL_CONFIG['throw_error'] || CONFIG_DEFAULTS[:throw_error],
-          errorColor: JEKYLL_CONFIG['error_color'] || CONFIG_DEFAULTS[:error_color]
+          throwOnError: JEKYLL_CONFIG['rendering_options']['throw_error'] || CONFIG_DEFAULTS[:rendering_options][:throw_error],
+          errorColor: JEKYLL_CONFIG['rendering_options']['error_color'] || CONFIG_DEFAULTS[:rendering_options][:error_color]
         }
       end
     end
