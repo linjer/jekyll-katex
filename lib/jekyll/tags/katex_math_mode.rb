@@ -17,7 +17,7 @@ module Jekyll
     class KatexMathMode < Liquid::Block
       LOG_TOPIC = 'KatexMathMode:'
       KATEX ||= Jekyll::Katex::KATEX_JS
-      LATEX_TOKEN_PATTERN = /(?<!\\)([$]{2}|[$]{1})(.+?)(?<!\\)\1/m
+      LATEX_TOKEN_PATTERN = /(?<!\\)([$]{2}|[$]{1})(.+?)(?<!\\)\1/m.freeze
 
       def initialize(tag_name, markup, tokens)
         super

@@ -25,14 +25,17 @@ module Jekyll
 
         katex_js = Dir.glob(File.join(js_path, '**', js_filename)).first
         raise 'Could not find KaTeX javascript file using provided configuration.' if katex_js.nil?
+
         Jekyll.logger.info LOG_TOPIC, "Found KaTeX js at: #{katex_js}"
         katex_js
       end
 
       def self.global_rendering_options
         {
-          throwOnError: JEKYLL_CONFIG['rendering_options']['throw_error'] || CONFIG_DEFAULTS[:rendering_options][:throw_error],
-          errorColor: JEKYLL_CONFIG['rendering_options']['error_color'] || CONFIG_DEFAULTS[:rendering_options][:error_color]
+          throwOnError: JEKYLL_CONFIG['rendering_options']['throw_error'] ||
+            CONFIG_DEFAULTS[:rendering_options][:throw_error],
+          errorColor: JEKYLL_CONFIG['rendering_options']['error_color'] ||
+            CONFIG_DEFAULTS[:rendering_options][:error_color]
         }
       end
     end

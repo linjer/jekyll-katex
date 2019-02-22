@@ -4,3 +4,6 @@ Metrics/LineLength:
 
 Metrics/BlockLength:
   Max: 60
+
+Naming/FileName:
+  Enabled: false

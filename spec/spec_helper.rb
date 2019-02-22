@@ -26,9 +26,9 @@ RSpec.configure do |config|
   end
 
   CONFIG_DEFAULTS = {
-    source:      source_dir,
+    source: source_dir,
     destination: dest_dir,
-    gems:        ['jekyll-katex'],
+    gems: ['jekyll-katex'],
     collections: ['my_collection']
   }.freeze
 

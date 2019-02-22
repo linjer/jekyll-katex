@@ -1,4 +1,3 @@
-
 # frozen_string_literal: true
 
 lib = File.expand_path('lib', __dir__)
@@ -25,7 +24,7 @@ Gem::Specification.new do |spec|
   #   raise 'RubyGems 2.0 or newer is required to protect against public gem pushes.'
   # end
 
-  spec.files         = `git ls-files -z`.split("\x0").grep(%r!^(bin|lib)/|^LICENSE.txt$!)
+  spec.files         = `git ls-files -z`.split("\x0").grep(%r{^(bin|lib)/|^LICENSE.txt$})
   spec.bindir        = 'bin'
   spec.executables   = []
   spec.require_paths = ['lib']
