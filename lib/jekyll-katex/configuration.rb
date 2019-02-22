@@ -10,7 +10,7 @@ module Jekyll
       LOG_TOPIC = 'Katex Configuration:'
       CONFIG_DEFAULTS = {
         js_filename: 'katex.min.js',
-        js_path: File.join(Jekyll::Katex::LIB_ROOT, 'assets/js/'),
+        js_path: File.join(Jekyll::Katex::LIB_ROOT, 'assets', 'js'),
         rendering_options: {
           throw_error: true,
           error_color: '#cc0000'
@@ -23,7 +23,7 @@ module Jekyll
         js_filename = JEKYLL_CONFIG['js_filename'] || CONFIG_DEFAULTS[:js_filename]
         js_path = JEKYLL_CONFIG['js_path'] || CONFIG_DEFAULTS[:js_path]
 
-        katex_js = Dir.glob("#{js_path}/**/#{js_filename}").first
+        katex_js = Dir.glob(File.join(js_path, '**', js_filename)).first
         raise 'Could not find KaTeX javascript file using provided configuration.' if katex_js.nil?
         Jekyll.logger.info LOG_TOPIC, "Found KaTeX js at: #{katex_js}"
         katex_js
