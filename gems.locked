@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jekyll-katex (0.4.2)
+    jekyll-katex (0.4.3)
       execjs (~> 2.7)
       jekyll (~> 3.8)
 
