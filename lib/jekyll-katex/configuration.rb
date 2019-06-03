@@ -32,6 +32,7 @@ module Jekyll
         katex_js = Dir.glob(File.join(js_path, '**', js_filename)).first
 
         raise 'Could not find KaTeX javascript file using provided configuration.' if katex_js.nil?
+
         Jekyll.logger.info LOG_TOPIC, "Found KaTeX js at: #{katex_js}"
         katex_js
       end
