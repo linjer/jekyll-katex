@@ -9,7 +9,7 @@ KaTeX is a library for rending math on the web using LaTeX, similar to MathJax.
 KaTeX differs from MathJax in that it displays faster rendering speed and renders to pure HTML rather than PNGs.
 There are various resources in benchmarking and comparing their performance, for more info, [start here](https://khan.github.io/KaTeX/).
 
-Comes packaged with KaTeX `0.10.1` but you can specify a different version in your Jekyll `_config.yml` (see below).
+Comes packaged with KaTeX `0.11.1` but you can specify a different version in your Jekyll `_config.yml` (see below).
 
 ## Installation
 
