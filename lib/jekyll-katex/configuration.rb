@@ -13,7 +13,8 @@ module Jekyll
         'js_path' => File.join(Jekyll::Katex::LIB_ROOT, 'assets', 'js'),
         'rendering_options' => {
           'throw_error' => true,
-          'error_color' => '#cc0000'
+          'error_color' => '#cc0000',
+          'macros' => {}
         }
       }.freeze
 
@@ -40,7 +41,8 @@ module Jekyll
       def self.global_rendering_options
         {
           throwOnError: CONFIG['rendering_options']['throw_error'],
-          errorColor: CONFIG['rendering_options']['error_color']
+          errorColor: CONFIG['rendering_options']['error_color'],
+          macros: CONFIG['rendering_options']['macros']
         }
       end
     end
