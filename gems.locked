@@ -8,8 +8,8 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.7.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.0)
     colorator (1.1.0)
     concurrent-ruby (1.1.5)
@@ -61,7 +61,7 @@ GEM
       ast (~> 2.4.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    public_suffix (4.0.1)
+    public_suffix (4.0.7)
     rainbow (3.0.0)
     rake (12.3.3)
     rb-fsevent (0.10.3)
