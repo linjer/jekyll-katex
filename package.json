@@ -8,7 +8,7 @@
   "author": "Jerry Lin",
   "license": "MIT",
   "dependencies": {
-    "katex": "^0.11.1"
+    "katex": "^0.16.10"
   },
   "repository": "git@github.com:linjer/jekyll-katex.git"
 }
